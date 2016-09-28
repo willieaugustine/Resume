@@ -990,3 +990,437 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	border-top: 5px solid #313131;
 	content: "";
 }
+
+.skill-bars li .percent5   { width: 5%; }
+.skill-bars li .percent10  { width: 10%; }
+.skill-bars li .percent15  { width: 15%; }
+.skill-bars li .percent20  { width: 20%; }
+.skill-bars li .percent25  { width: 25%; }
+.skill-bars li .percent30  { width: 30%; }
+.skill-bars li .percent35  { width: 35%; }
+.skill-bars li .percent40  { width: 40%; }
+.skill-bars li .percent45  { width: 45%; }
+.skill-bars li .percent50  { width: 50%; }
+.skill-bars li .percent55  { width: 55%; }
+.skill-bars li .percent60  { width: 60%; }
+.skill-bars li .percent65  { width: 65%; }
+.skill-bars li .percent70  { width: 70%; }
+.skill-bars li .percent75  { width: 75%; }
+.skill-bars li .percent80  { width: 80%; }
+.skill-bars li .percent85  { width: 85%; }
+.skill-bars li .percent90  { width: 90%; }
+.skill-bars li .percent95  { width: 95%; }
+.skill-bars li .percent100 { width: 100%; }
+
+
+/** 
+ * ===================================================================
+ * 08. common styles (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+.grey-section {
+	background: #ebebeb;
+}
+.grey-section p.lead {
+	color: #7d7d7d;
+}
+.section-intro {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 3.6rem;
+	position: relative;
+}
+.section-intro h1 {
+	font-family: "poppins-semibold", serif;
+	font-size: 3.6rem;
+	color: #313131;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+}
+.section-intro h5 {
+	color: #FF0077;
+	font-size: 1.6rem;
+	line-height: 1.875;
+	margin-bottom: 0.3rem;
+	letter-spacing: .4rem;
+}
+
+/**
+ * responsive:
+ * common styles
+ * ------------------------------------------------------------------- 
+ */
+@media only screen and (max-width:768px) {
+	.section-intro {
+		max-width: 650px;
+	}
+	.section-intro h1 {
+		font-size: 3rem;
+	}
+}
+@media only screen and (max-width:600px) {
+	.section-intro h1 {
+		font-size: 2.6rem;
+	}
+	.section-intro h5 {
+		font-size: 1.5rem;
+		letter-spacing: .3rem;
+	}
+}
+@media only screen and (max-width:400px) {
+	.section-intro h1 {
+		font-size: 2.4rem;
+	}
+}
+
+
+/** 
+ * ===================================================================
+ * 09. header styles - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+header {
+	position: fixed;
+	width: 100%;
+	min-height: 66px;
+	z-index: 600;
+}
+header .row {
+	position: relative;
+	min-height: 66px;
+}
+header .top-bar {
+	display: block;
+	background: #000000;
+	min-width: 220px;
+	min-height: 66px;
+	position: absolute;
+	left: 90px;
+	top: 0;
+}
+header .logo {
+	float: left;
+	margin-left: 20px;
+	margin-right: 50px;
+	margin-top: 25px;
+	position: relative;
+}
+header .logo a {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	width: 92px;
+	height: 15px;
+	background: url("../images/logo.png") no-repeat center;
+	background-size: 92px 15px;
+}
+
+/**
+ * menu toggle - (_layout.css)
+ * ------------------------------------------------------------------- 
+ */
+.menu-toggle {
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	margin-top: 13px;
+	display: block;
+	position: relative;
+}
+.menu-toggle span {
+	display: block;
+	background-color: #FF0077;
+	width: 24px;
+	height: 3px;
+	margin-top: -1.5px;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	bottom: auto;
+	left: auto;
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+}
+.menu-toggle span::before, .menu-toggle span::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	position: absolute;
+	left: 0;
+	-moz-transition-duration: 0.2s, 0.2s;
+	-o-transition-duration: 0.2s, 0.2s;
+	-webkit-transition-duration: 0.2s, 0.2s;
+	-ms-transition-duration: 0.2s, 0.2s;
+	transition-duration: 0.2s, 0.2s;
+	-moz-transition-delay: 0.2s, 0s;
+	-o-transition-delay: 0.2s, 0s;
+	-webkit-transition-delay: 0.2s, 0s;
+	-ms-transition-delay: 0.2s, 0s;
+	transition-delay: 0.2s, 0s;
+}
+.menu-toggle span::before {
+	top: -8px;
+	-moz-transition-property: top, transform;
+	-o-transition-property: top, transform;
+	-webkit-transition-property: top, transform;
+	-ms-transition-property: top, transform;
+	transition-property: top, transform;
+}
+.menu-toggle span::after {
+	bottom: -8px;
+	-moz-transition-property: bottom, transform;
+	-o-transition-property: bottom, transform;
+	-webkit-transition-property: bottom, transform;
+	-ms-transition-property: bottom, transform;
+	transition-property: bottom, transform;
+}
+
+/* is clicked */
+.menu-toggle.is-clicked span {
+	background-color: rgba(255, 0, 119, 0);
+}
+.menu-toggle.is-clicked span::before, .menu-toggle.is-clicked span::after {
+	background-color: #ff0077;
+	-moz-transition-delay: 0s, 0.2s;
+	-o-transition-delay: 0s, 0.2s;
+	-webkit-transition-delay: 0s, 0.2s;
+	-ms-transition-delay: 0s, 0.2s;
+	transition-delay: 0s, 0.2s;
+}
+.menu-toggle.is-clicked span::before {
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.menu-toggle.is-clicked span::after {
+	bottom: 0;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/* navigation panel */
+#main-nav-wrap {
+	display: block;
+	width: 100%;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+/* dropdown nav */
+.main-navigation {
+	background: #000000;
+	padding: 24px 30px 42px;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: none;
+}
+.main-navigation > li {
+	display: block;
+	height: auto;
+	text-align: left;
+	padding: 0;
+}
+.main-navigation li a {
+	display: block;
+	color: #FFFFFF;
+	width: auto;
+	padding: 15px 0;
+	line-height: 16px;
+	border: none;
+}
+.main-navigation li a:hover {
+	color: #FF0077;
+	padding-left: 1rem;
+}
+.main-navigation li.current > a {
+	background: none;
+	color: #FF0077;
+}
+
+/**
+ * responsive:
+ * header styles
+ * --------------------------------------------------------------- 
+ */
+@media only screen and (max-width:1024px) {
+	header .top-bar {
+		left: 60px;
+	}
+}
+@media only screen and (max-width:768px) {
+	header .top-bar {
+		left: 50px;
+	}
+}
+@media only screen and (max-width:600px) {
+	header .top-bar {
+		left: 35px;
+	}
+}
+@media only screen and (max-width:400px) {
+	header .top-bar {
+		left: 25px;
+	}
+}
+
+
+/** 
+ * ===================================================================
+ * 10. intro - (_layout.scss) 
+ *
+ * ------------------------------------------------------------------- 
+ */
+#intro {
+	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	min-height: 720px;
+	display: table;
+	position: relative;
+	text-align: center;
+}
+.intro-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #111111;
+	opacity: .85;
+}
+
+.intro-content {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-transform: translateY(-2.1rem);
+	-ms-transform: translateY(-2.1rem);
+	transform: translateY(-2.1rem);
+}
+.intro-content h1 {
+	color: #FFFFFF;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 8.4rem;
+	line-height: 1.071;
+	max-width: 900px;
+	margin-top: 0;
+	margin-bottom: .6rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.intro-content h5 {
+	color: #cc005f;
+	font-family: "poppins-bold", sans-serif;
+	font-size: 2.3rem;
+	line-height: 1.565;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.intro-content .intro-position {
+	font-family: "lora-regular", serif;
+	font-size: 1.7rem;
+	line-height: 2.4rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	color: #FFFFFF;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.intro-content .intro-position span {
+	display: inline-block;
+}
+.intro-content .intro-position span::after {
+	content: "|";
+	text-align: center;
+	display: inline-block;
+	padding: 0 8px 0 14px;
+	color: rgba(255, 255, 255, 0.3);
+}
+.intro-content .intro-position span:first-child::before {
+	content: "|";
+	text-align: center;
+	display: inline-block;
+	padding: 0 14px 0 8px;
+	color: rgba(255, 255, 255, 0.3);
+}
+.intro-content .button {
+	color: #FFFFFF !important;
+	border-color: rgba(255, 255, 255, 0.3);
+	height: 6rem !important;
+	line-height: 5.4rem !important;
+	padding: 0 3.5rem 0 3rem !important;
+	margin-top: .6rem;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	letter-spacing: .25rem;
+}
+.intro-content .button:hover, .intro-content .button:focus {
+	border-color: #cc005f;
+}
+.intro-content .button::after {
+	display: inline-block;
+	content: "\f107";
+	font-family: fontAwesome;
+	font-size: 1.6rem;
+	line-height: inherit;
+	text-align: center;
+	position: relative;
+	left: 1.2rem;
+}
+
+.intro-social {
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 7.2rem;
+	font-size: 3.3rem;
+	margin: 0;
+	padding: 0;
+}
+.intro-social li {
+	display: inline-block;
+	margin: 0 20px;
+	padding: 0;
+}
+.intro-social li a, .intro-social li a:visited {
+	color: #FFFFFF;
+}
+.intro-social li a:hover, .intro-social li a:focus {
+	color: #cc005f;
+}
+
+/**
+ * responsive:
+ * Intro
+ * --------------------------------------------------------------- 
+ */
