@@ -2534,3 +2534,65 @@ footer .copyright span::after {
 footer .copyright span:last-child::after {
 	display: none;
 }
+
+/**
+ * responsive:
+ * footer
+ * -------------------------------------------------------------------
+ */
+@media only screen and (max-width:768px) {
+	footer {
+		text-align: center;
+	}
+	footer .social {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+	footer .copyright span {
+		display: block;
+	}
+	footer .copyright span::after {
+		display: none;
+	}
+}
+
+/**
+ * go to top - (_layout.scss)
+ * ------------------------------------------------------------------- 
+ */
+#go-top {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 600;
+	display: none;
+}
+#go-top a {
+	text-decoration: none;
+	border: 0 none;
+	display: block;
+	height: 6.6rem;
+	width: 6rem;
+	line-height: 6.6rem;
+	text-align: center;
+	background: #cc005f;
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#go-top a i {
+	font-size: 1.6rem;
+	line-height: inherit;
+}
+#go-top a:hover {
+	background: #000000;
+}
+
+/*# sourceMappingURL=main.css.map */
